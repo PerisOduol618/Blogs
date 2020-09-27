@@ -6,6 +6,7 @@ class Config:
     '''
     SECRET_KEY = 'oduol'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:access@localhost/blogs'
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS =True
 
 
