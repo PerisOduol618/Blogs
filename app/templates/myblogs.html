@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<div class="container">
+    <div class="row">
+        {%for blog in blogs%}
+        <div class="col-md-4">
+            <h1>{{blog.title_blog}}</h1>
+            <h3>{{blog.description}}</h3>
+            <h4>{{blog.user.username}}</h4>
+            <p class="date text-muted">Posted on ~ {{blog.date.strftime('%Y-%m-%d')}}</p>
+            <a href="{{url_for('main.view', id=blog.id)}}"><button >Comment</button></a>
+            <a href="{{url_for('main.delete', id=blog.id)}}"><button >Delete</button></a>
+            <a href="{{url_for('main.update_blog', id=blog.id)}}"><button >Update blog</button></a>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

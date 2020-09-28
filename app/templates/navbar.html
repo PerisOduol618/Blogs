@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 <nav class="navbar navbar-dark default-color">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -11,6 +11,19 @@
             <a href="/" class="navbar-brand"><Strong>My Blogs</Strong></a>
         </div>
         <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="{{url_for('main.index')}}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('main.theblog')}}" class="nav-link">My Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('main.blogs')}}" class="nav-link">Add Blog</a>
+                </li>
+                
+                
+            </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
@@ -21,7 +34,7 @@
                         <li><a href="{{url_for('main.profile',uname=current_user.username)}}">🤵 Profile</a></li>
                         <hr>
                        
-                        <hr>
+                      
                         <li><a href="{{url_for('auth.logout')}}">🙎‍♂️Sign out</a></li>
                     </ul>
                 </li>
