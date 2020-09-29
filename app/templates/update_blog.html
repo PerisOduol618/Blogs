@@ -8,11 +8,28 @@
 
 {% block content %}
 
-<div class="container">
+<!-- <div class="container">
     <h1>Update Blog</h1>
 </div>
 <div class='container'>
     {{wtf.quick_form(form)}}
+</div> -->
+
+
+<div  class='container' style="background-image: url(https://images.unsplash.com/photo-1513077202514-c511b41bd4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80); background-repeat: no-repeat; background-size: cover; height: 80vh;  background-position: center;">
+    <h1 style="margin: 5%; text-align: center; font-family: 'Lobster', cursive;">Update Blog</h1>
+    <div class="col-md-6">
+    </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {{wtf.quick_form(form)}}
+                </div>
+        
+            </div>
+        </div>
+    </div>
 </div>
+
 
 {% endblock %}
