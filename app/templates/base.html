@@ -1,8 +1,18 @@
 {% extends 'bootstrap/base.html'%}
+<!-- <head> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> -->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+<!-- </head> -->
+{% endblock %}
 
 <!-- Navbar block  -->
 {% block navbar %}
-    {% include 'navbar.html' %}
+{% include 'navbar.html' %}
 {% endblock %}
 
 {% block content %}

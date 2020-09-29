@@ -1,14 +1,31 @@
 {% extends 'base.html' %}
 
+
 {%block content%}
-
-<div class="container">
-    <h2>Welcome to Blog Website</h2>
+<!-- Styles block -->
 
 
-    <p><b>Author</b> {{blogQuote.author}}</p>
-    <hr>
+<!-- Content block -->
+
+<div class="home">
+    <div class="container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div>
+                <h2 style="font-size: 80px; font-family: 'Lobster', cursive;  padding-top: 40px; text-align: center;">Welcome to Blog Website</h2>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+   
+    
+
+<br><br>
+    <p><b>Author:</b> {{blogQuote.author}}</p>
+    
     <p>{{blogQuote.quote}}</p>
 
+
+     
 </div>
 {%endblock%}

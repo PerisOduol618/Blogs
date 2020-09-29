@@ -1,4 +1,4 @@
-from flask import render_template,request,redirect,url_for,abort,jsonify
+from flask import render_template,request,redirect,url_for,abort,jsonify, flash
 from . import main
 from .forms import UpdateProfile, BlogForm, CommentForm
 from .. import db, photos
@@ -133,6 +133,8 @@ def delete_comment(comment_id):
         abort(403)
     db.session.delete(comment)
     db.session.commit()
-    return jsonify("Success"),200
+    flash('comment succesfully deleted')
+    return redirect (url_for('main.theblog'))
+    # return jsonify("Success"),200
  
    

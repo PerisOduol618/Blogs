@@ -1,0 +1,12 @@
+.home {
+  background-image: url("../static/images/yakwanza.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.panel{
+    box-shadow: 0 4px 8px 0 rgba(202, 33, 33, 0.2);
+    transition: 0.3s;
+    /* text-align: center; */
+}

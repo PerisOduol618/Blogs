@@ -1,5 +1,4 @@
-
-<nav class="navbar navbar-dark default-color">
+<nav class="navbar navbar-inverse navbar-dark default-color">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -8,21 +7,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand"><Strong>My Blogs</Strong></a>
+            <a href="/" class="navbar-brand"><Strong><span style="font-family: 'Lobster', cursive; font-size: 30px;">My Blogs</Strong></a></span>
+
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a href="{{url_for('main.index')}}" class="nav-link">Home</a>
+                    <a href="{{url_for('main.index')}}" class="nav-link"><span style="font-family: 'Lobster', cursive;">Home</span> </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('main.theblog')}}" class="nav-link">My Blogs</a>
+                    <a href="{{url_for('main.theblog')}}" class="nav-link"><span style="font-family: 'Lobster', cursive;">Blogs</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('main.blogs')}}" class="nav-link">Add Blog</a>
+                    <a href="{{url_for('main.blogs')}}" class="nav-link"><span style="font-family: 'Lobster', cursive;">Add blog</span></a>
                 </li>
-                
-                
+
+
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -33,8 +33,8 @@
                     <ul class="dropdown-menu ">
                         <li><a href="{{url_for('main.profile',uname=current_user.username)}}">🤵 Profile</a></li>
                         <hr>
-                       
-                      
+
+
                         <li><a href="{{url_for('auth.logout')}}">🙎‍♂️Sign out</a></li>
                     </ul>
                 </li>
@@ -44,5 +44,5 @@
             {%endif%}
         </div>
     </div>
-    </div>
+
 </nav>

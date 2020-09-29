@@ -8,18 +8,18 @@
         <hr>
         <!--Display profile photo-->
         <div class="col-md-4">
-            <div class="thumbnail">
+            <div class="">
                 {% if user.profile_pic_path %}
                 <img class="" src="{{url_for('static', filename=user.profile_pic_path)}}" alt="profile"
-                    class="img-circle img-responsive">
+                    class="img-circle img-responsive" width="250px"><br><br>
                 {%else%}
-                <p>No profile picture</p>
+               <i class="fas fa-user fa-10x text-center" ></i> <br><br>
                 {% endif %}
 
                 {% if user == current_user %}
                 <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post"
                     enctype="multipart/form-data">
-                    <input type="file" name="photo" class="form-control" required>
+                    <input type="file" name="photo" class="form-control" required><br>
                     <input type="submit">
                 </form>
                 {% endif %}
@@ -27,12 +27,12 @@
         </div>
         <div class="col-md-4">
             <p> <b>Name:</b> {{user.firstname}} {{user.lastname}} </p>
-            <p><b> No of blogs:</b> {{pitches}}</p>
+            <p><b> No of blogs:</b> {{blogs}}</p>
             <p><b> Date joined: </b>{{date}}</p>
         </div>
        
         <div class="col-md-4">
-            <h3>Add Your Bio </h3>
+            <h3><b>Add Your Bio</b></h3>
 
             <!--Displaying user bio-->
             {% if user.bio %}

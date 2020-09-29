@@ -3,13 +3,22 @@
 {%block content%}
 
 <div class="container">
+    {%with messages = get_flashed_messages ()%}
+    {% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+        <li> {{message}} </li>
+        {% endfor %}
+
+    </ul>
+    {%endif%}
+    {% endwith %}
     <div class="row">
         
         <div class="col-md-4">
             <h1>{{blog.title_blog}}</h1>
             <h4>{{blog.user.username}}</h4>
             <h3>{{blog.description}}</h3>
-            <!-- <h5>{{blog.date}}</h5> -->
             <p class="date text-muted">Posted on ~ {{blog.date.strftime('%Y-%m-%d')}}</p>
         </div>
         <div class="col-md-4">
