@@ -1,23 +1,28 @@
-# Best Pitches
+# My Blogs
 
 #### Author: [Peris Oduol](https://github.com/PerisOduol618)
 
 
-* Link to live site: https://pepepitch.herokuapp.com/
+* Link to live site: [My blogs](https://pepeblogs.herokuapp.com/)
 
 ## Description
-This is an application that allows users to use thaere one minute wisely. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
+This is a personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally it has a feature that displays random quotes to inspire your users.
 
 ## My Blogs
 The user would like to.... :
-* I would like to see the pitches other people have posted.
-*  I would like to vote on the pitch they liked and give it a downvote or upvote.
-* I would like to view the pitches I have created in my profile page
-* I would like to submit a pitch in any category.
-* I would like to view the different categories.
+*  View the blog posts on the site
+*  Comment on blog posts
+*  View the most recent posts
+*  An email alert when a new post is made by joining a        subscription.
+* See random quotes on the site
 
+The writer would like to... :
 
-
+* see random quotes on the site
+* sign in to the blog.
+* create a blog from the application.
+* delete comments that I find insulting or degrading.
+* update or delete blogs I have created.
 
 
 
@@ -25,16 +30,54 @@ The user would like to.... :
 ## Behaviour Driven Development
 | Behavior            | Input                         | Output                        | 
 | ------------------- | ----------------------------- | ----------------------------- |
-| View Product Pitches | Click on any category | Taken to the clicked category | Click on `Click    submit To Post A Pitch` | Redirected to the login page | Signs In/ Signs Up |
-| Click on `Click create a new To Post A Pitch` | If logged in, display form to add a pitch | Redirected to the home page |
-| Click upvote/ downvote button | Redirects to home page | Upvote/ downvote count changes | Click add comment button | Redirects to the comment page | Displays a comment form | Click on Sign Out | Redirects to the home page | Signs user out |
+| View blog | Click on comment | Taken to the clicked post | Click on `Comment` | Taken to where you can comment | Signs In/ Signs Up |
+| Click on `Click Add a blog` | If logged in, display form to add a blog| Redirected to the home page |
 | Click on profile | Redirects to the profile page | User adds bio and profile picture |
+| Click on Sign Out | Redirects to the home page | Signs user out |
 
+
+## Getting started
+
+### Prerequisites
+* python3.6
+* virtual environment
+* pip
+
+### Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/PerisOduol618/Blogs.git
+        $ cd blogs
+
+## Running the Application
+* Install virtual environment using `$ python3.6 -m venv --without-pip virtual`
+* Activate virtual environment using `$ source virtual/bin/activate`
+* Download pip in our environment using `$ curl https://bootstrap.pypa.io/get-pip.py | python`
+* Install all the dependencies from the requirements.txt file by running `python3.6 pip install -r requirements.txt`
+* Create a `start.sh` file in the root of the folder and add the following code:
+
+        export MAIL_USERNAME=<your-email-address>
+        export MAIL_PASSWORD=<your-email-password>
+        export SECRET_KEY=<your-secret-key>
+
+* Edit the configuration instance in `manage.py` from `development` to `production`
+* To run the application, in your terminal:
+
+        $ chmod a+x start.sh
+        $ ./start.sh
+        
+## Testing the Application
+* To run the tests for the class file:
+
+        $ python3.6 manage.py server
+        
 ## Built With
 
 * [Python3.6](https://docs.python.org/3/)
 * Flask
 * Boostrap
+* HTML
+* CSS
 
 
 ## Support and contact details
