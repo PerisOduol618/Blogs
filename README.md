@@ -1,14 +1,15 @@
 # My Blogs
 
-#### Author: [Peris Oduol](https://github.com/PerisOduol618)
+#### Author: [Peris Oduol]
+(https://github.com/PerisOduol618)
 
 
 * Link to live site: [My blogs](https://pepeblogs.herokuapp.com/)
 
-## Description
+## Bio
 This is a personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally it has a feature that displays random quotes to inspire your users.
 
-## My Blogs
+## Overview
 The user would like to.... :
 *  View the blog posts on the site
 *  Comment on blog posts
@@ -18,11 +19,11 @@ The user would like to.... :
 
 The writer would like to... :
 
-* see random quotes on the site
-* sign in to the blog.
-* create a blog from the application.
-* delete comments that I find insulting or degrading.
-* update or delete blogs I have created.
+* See random quotes on the site
+* Sign in to the blog.
+* Create a blog from the application.
+* Delete comments that I find insulting or degrading.
+* Update or Delete blogs I have created.
 
 
 
@@ -38,7 +39,7 @@ The writer would like to... :
 
 ## Getting started
 
-### Prerequisites
+### Specification
 * python3.6
 * virtual environment
 * pip
@@ -71,7 +72,7 @@ The writer would like to... :
 
         $ python3.6 manage.py server
         
-## Built With
+## Developed From
 
 * [Python3.6](https://docs.python.org/3/)
 * Flask
@@ -81,7 +82,15 @@ The writer would like to... :
 
 
 ## Support and contact details
- Incase you come across errors, have questions, ideas ,concerns, or want to contribute to the application, feel free to reach me at :oduolpepe618@gmail.com
+ Incase you come across errors,
+ have questions,
+ ideas ,concerns,
+ or want to contribute to the application,
+ feel free to reach me at
+ 
+ :oduolpepe618@gmail.com
+ 
+### Contributors
 
 ### License
 
