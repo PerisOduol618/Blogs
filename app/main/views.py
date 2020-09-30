@@ -2,9 +2,11 @@ from flask import render_template,request,redirect,url_for,abort,jsonify, flash
 from . import main
 from .forms import UpdateProfile, BlogForm, CommentForm
 from .. import db, photos
-from flask_login import login_required, current_user
-from ..models import User, Blog,Comment
 from ..request import get_blogQuotes
+from ..models import User, Blog,Comment
+from flask_login import login_required, current_user
+
+
 
 # Views
 @main.route('/')
@@ -85,6 +87,26 @@ def theblog():
     return render_template('myblogs.html', blogs=blogs)
 
 
+
+@main.route('/Update/<int:id>', methods=['GET', 'POST'])
+@login_required
+def update_blog(id):
+    blog = Blog.query.get_or_404(id)
+    if blog.user != current_user:
+        abort(403)
+    form = BlogForm()
+    if form.validate_on_submit():
+        blog.title_blog = form.title_blog.data
+        blog.description = form.description.data
+        db.session.commit()
+
+        return redirect(url_for('main.theblog'))
+    elif request.method == 'GET':
+        form.title_blog.data = blog.title_blog
+        form.description.data = blog.description
+    return render_template('update_blog.html', form=form)
+
+
 @main.route('/view/<int:id>', methods=['GET', 'POST'])
 @login_required
 def view(id):
@@ -107,23 +129,7 @@ def delete(id):
  
     return redirect(url_for('main.theblog'))
 
-@main.route('/Update/<int:id>', methods=['GET', 'POST'])
-@login_required
-def update_blog(id):
-    blog = Blog.query.get_or_404(id)
-    if blog.user != current_user:
-        abort(403)
-    form = BlogForm()
-    if form.validate_on_submit():
-        blog.title_blog = form.title_blog.data
-        blog.description = form.description.data
-        db.session.commit()
 
-        return redirect(url_for('main.theblog'))
-    elif request.method == 'GET':
-        form.title_blog.data = blog.title_blog
-        form.description.data = blog.description
-    return render_template('update_blog.html', form=form)
 
 @main.route('/delete_comment/<int:comment_id>', methods=['GET', 'POST'])
 @login_required
